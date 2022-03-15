@@ -1,5 +1,4 @@
-#include <main.h>
-#include <0-putchar.c>
+#include "holberton.h"
 /**
  * main - Entry point
  *
@@ -7,7 +6,7 @@
  */
 int main(void)
 {
-	char *sh = "alxschool";
+	char *sh = "holberton.h";
 
 	while (*sh)
 	{
