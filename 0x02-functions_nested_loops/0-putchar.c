@@ -1,4 +1,5 @@
 #include "alxschool"
+#include <main.h>
 /**
  * main - Entry point
  *
