@@ -2,7 +2,6 @@
 
 int check_path(char *S1, char *s2);
 char *move_char(char *s2);
-
 /**
  * wildcmp - compares 2 strings
  * @s1: string to be compared
@@ -36,7 +35,6 @@ int wildcmp(char *s1, char *s2)
 	}
 	return (0);
 }
-
 /**
  *check_path - checks recursively for all the paths when the
  * characters are equal
@@ -52,5 +50,4 @@ int check_path(char *s1, char *s2)
 	if (*s1 == *s2)
 		return (wildcmp(s1, s2));
 	return  (check_path(s1 + 1, s2));
-
 }
