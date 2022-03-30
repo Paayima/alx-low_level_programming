@@ -1,53 +1,29 @@
 #include "main.h"
-
-int check_path(char *S1, char *s2);
-char *move_char(char *s2);
+int squareroot(int n, int i);
 /**
- * wildcmp - compares 2 strings
- * @s1: string to be compared
- * @s2: string to be compared
- *
- * Return: returns numeral value
+ * _sqrt_recursion - no loop, 1. 2nd function - checks for perfect square
+ * @n: input
+ * Return: Always 0 (Success)
  */
-int wildcmp(char *s1, char *s2)
+int _sqrt_recursion(int n)
 {
-	int i = 0;
-
-	if (*s1 == '\0' && *s2 == '*' && !*move_char(s2))
-		return (1);
-	if (*s1 == *s2)
-	{
-		if (*s1 == '\0')
-			return (1);
-	return (wildcmp(s1 + 1, s2 + 1));
-	}
-	if (*s1 == '\0' || *s2 == '\0')
-		return (0);
-	if (*s2 == '*')
-	{
-		s2 = move_char(s2);
-		if (*s2 == '\0')
-			return (1);
-		if (*s1 == *s2)
-			i += wildcmp(s1 + 1, s2 + 1);
-		i += check_path(s1 + 1, s2);
-		return (!!i);
-	}
-	return (0);
+	if (n < 0)
+		return (-1);
+	else
+		return (squareroot(n, (n + 1) / 2));
 }
 /**
- *check_path - checks recursively for all the paths when the
- * characters are equal
- * @s1: first string
- * @s2: second string
- *
- * Return: return value of wildcmp() or of itself
+ * squareroot - checks if perfect square
+ * @n: input
+ * @i: counter
+ * Return: if square root
  */
-int check_path(char *s1, char *s2)
+int squareroot(int n, int i)
 {
-	if (*s1 == '\0')
-		return (0);
-	if (*s1 == *s2)
-		return (wildcmp(s1, s2));
-	return  (check_path(s1 + 1, s2));
+	if (i < 1)
+		return (-1);
+	else if (i * i == n)
+		return (i);
+	else
+		return (squareroot(n, i - 1));
 }
