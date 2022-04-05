@@ -1,6 +1,5 @@
-iinclude <stdlib.h>
-#include "holberton.h"
-
+#include <stdlib.h>
+#include "main.h"
 /**
  * **alloc_grid - creates a two dimensional array of ints
  * @width: width of the matrix
@@ -41,5 +40,4 @@ int **alloc_grid(int width, int height)
 		}
 	}
 	return (array);
-}
 }
