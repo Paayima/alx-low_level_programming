@@ -16,6 +16,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 		s1 = "";
+	
 	if (s2 == NULL)
 		s2 = "";
 
@@ -35,6 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (co = 0; co < i; co++)
 		arr[co] = s1[co];
+	
 	for (co_2 = 0; co < j; co_2++)
 	{
 		arr[co] = s2[co_2];
