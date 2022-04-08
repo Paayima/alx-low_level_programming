@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "holberton.h"
+#include "main.h"
 /**
  * *string_nconcat - concatenates n bytes of a string to another string
  * @s1: string to append to
@@ -39,6 +39,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s[i++] = s2[j++];
 
 	s[i] = '\0';
-
 	return (s);
 }
